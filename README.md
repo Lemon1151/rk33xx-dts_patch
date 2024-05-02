@@ -1,8 +1,6 @@
 ## 编译步骤：
 需要一个ubuntu系统
-
 拉取Armbian官方源代码到本地git clone --depth=1 --branch=main https://github.com/armbian/build
-
 复制本仓库下所有文件到你本地build目录
 cd build
 ./compile.sh
