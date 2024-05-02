@@ -2,4 +2,3 @@
 
 ophub项目地址：https://github.com/ophub/amlogic-s9xxx-armbian
 
-dts来自lede仓库https://github.com/coolsnowwolf/lede
