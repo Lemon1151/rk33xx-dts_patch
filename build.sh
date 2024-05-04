@@ -3,7 +3,7 @@
 set -e
 WORKSPACE=$(dirname $(readlink -f $0))
 
-BOARD_LIST=(xiaobao-nas-v1)
+BOARD_LIST=(xiaobao-nas-v1 nanopi-r4s rk3399-orangepi-4-lts)
 
 # default value
 BOARD=$1
@@ -16,7 +16,7 @@ COMPRESS_OUTPUTIMAGE=sha,xz
 BOOT_LOGO=no
 # GIT_BRANCH=$(git branch --show-current)
 
-#git switch v24.02
+#git switch main
 
 build_image() {
     local exists=0
