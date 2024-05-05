@@ -2,7 +2,7 @@ diff --git a/configs/xiaobao-nas-v1-rk3399_defconfig b/configs/xiaobao-nas-v1-rk
 new file mode 100644
 --- /dev/null
 +++ b/configs/xiaobao-nas-v1-rk3399_defconfig
-@@ -0,0 +1,70 @@
+@@ -0,0 +1,71 @@
 +CONFIG_ARM=y
 +CONFIG_SKIP_LOWLEVEL_INIT=y
 +CONFIG_COUNTER_FREQUENCY=24000000
@@ -49,6 +49,7 @@ new file mode 100644
 +CONFIG_REGULATOR_PWM=y
 +CONFIG_REGULATOR_RK8XX=y
 +CONFIG_PWM_ROCKCHIP=y
+++CONFIG_SENSORS_PWM_FAN=y
 +CONFIG_DM_RESET=y
 +CONFIG_BAUDRATE=1500000
 +CONFIG_DEBUG_UART_SHIFT=2
