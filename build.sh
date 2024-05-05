@@ -7,7 +7,7 @@ BOARD_LIST=(xiaobao-nas-v1 nanopi-r4s rk3399-orangepi-4-lts)
 
 # default value
 BOARD=$1
-#BRANCH=current
+BRANCH=current
 #RELEASE=bookworm
 BUILD_MINIMAL=no
 BUILD_DESKTOP=no
