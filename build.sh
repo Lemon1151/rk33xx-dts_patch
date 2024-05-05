@@ -16,7 +16,7 @@ COMPRESS_OUTPUTIMAGE=sha,xz
 BOOT_LOGO=no
 # GIT_BRANCH=$(git branch --show-current)
 
-#git switch main
+git switch main
 
 build_image() {
     local exists=0
