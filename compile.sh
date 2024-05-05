@@ -21,7 +21,7 @@ set -o errexit  ## set -e : exit the script if any statement returns a non-true 
 # default value
 BUILD_MINIMAL=no
 BUILD_DESKTOP=no
-#KERNEL_CONFIGURE=no
+KERNEL_CONFIGURE=no
 COMPRESS_OUTPUTIMAGE=sha,xz
 BOOT_LOGO=yes
 
