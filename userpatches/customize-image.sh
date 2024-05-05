@@ -8,17 +8,6 @@ ARCH=$5
 
 set -e
 
-# Copy DTB, Unofficial support board update kernel while lost dtb.
-BOOT_CONF=/boot/extlinux/extlinux.conf
-if [ -f ${BOOT_CONF} ]; then
-    mkdir -p /boot/dtb
-    DTB_PATH=$(cat ${BOOT_CONF} | grep 'fdt /boot/dtb/' | awk '{print $2}')
-    DTB_NAME=$(echo ${DTB_PATH##*/})
-    NEW_PATH=/boot/dtb/${DTB_NAME}
-    \cp ${DTB_PATH} ${NEW_PATH}
-    sed -i "s|${DTB_PATH}|${NEW_PATH}|g" ${BOOT_CONF}
-fi
-
 # Disable update
 mkdir -p /etc/apt/preferences.d
 DISABLE_UPDATE_CONF=/etc/apt/preferences.d/disable-update
