@@ -1,4 +1,4 @@
-## 编译步骤：
+## Armbian编译：
 1.需要一个ubuntu系统  
 2.拉取Armbian官方源代码到本地  git clone --depth=1 --branch=main https://github.com/armbian/build  
 3.复制本仓库下所有文件到你本地build目录(或者复制patch补丁到对应的patch目录)  
