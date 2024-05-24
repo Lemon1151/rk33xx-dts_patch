@@ -1,7 +1,7 @@
-diff --git a/configs/xiaobao-nas-v1-rk3399_defconfig b/configs/xiaobao-nas-v1-rk3399_defconfig
+diff --git a/configs/xiaobao-nas-rk3399_defconfig b/configs/xiaobao-nas-rk3399_defconfig
 new file mode 100644
 --- /dev/null
-+++ b/configs/xiaobao-nas-v1-rk3399_defconfig
++++ b/configs/xiaobao-nas-rk3399_defconfig
 @@ -0,0 +1,71 @@
 +CONFIG_ARM=y
 +CONFIG_SKIP_LOWLEVEL_INIT=y
@@ -10,14 +10,14 @@ new file mode 100644
 +CONFIG_SYS_TEXT_BASE=0x00200000
 +CONFIG_NR_DRAM_BANKS=1
 +CONFIG_ENV_OFFSET=0x3F8000
-+CONFIG_DEFAULT_DEVICE_TREE="rk3399-xiaobao-nas-v1"
++CONFIG_DEFAULT_DEVICE_TREE="rk3399-xiaobao-nas"
 +CONFIG_ROCKCHIP_RK3399=y
 +CONFIG_TARGET_EVB_RK3399=y
 +CONFIG_DEBUG_UART_BASE=0xFF1A0000
 +CONFIG_DEBUG_UART_CLOCK=24000000
 +CONFIG_SYS_LOAD_ADDR=0x800800
 +CONFIG_DEBUG_UART=y
-+CONFIG_DEFAULT_FDT_FILE="rockchip/rk3399-xiaobao-nas-v1.dtb"
++CONFIG_DEFAULT_FDT_FILE="rockchip/rk3399-xiaobao-nas.dtb"
 +CONFIG_DISPLAY_BOARDINFO_LATE=y
 +# CONFIG_SPL_RAW_IMAGE_SUPPORT is not set
 +CONFIG_SPL_STACK_R=y
@@ -74,10 +74,10 @@ new file mode 100644
 +CONFIG_DISPLAY_ROCKCHIP_HDMI=y
 +CONFIG_SPL_TINY_MEMSET=y
 +CONFIG_ERRNO_STR=y
-diff --git a/arch/arm/dts/rk3399-xiaobao-nas-v1-u-boot.dtsi b/arch/arm/dts/rk3399-xiaobao-nas-v1-u-boot.dtsi
+diff --git a/arch/arm/dts/rk3399-xiaobao-nas-u-boot.dtsi b/arch/arm/dts/rk3399-xiaobao-nas-u-boot.dtsi
 new file mode 100644
 --- /dev/null
-+++ b/arch/arm/dts/rk3399-xiaobao-nas-v1-u-boot.dtsi
++++ b/arch/arm/dts/rk3399-xiaobao-nas-u-boot.dtsi
 @@ -0,0 +1,17 @@
 +// SPDX-License-Identifier: GPL-2.0+
 +/*
@@ -96,10 +96,10 @@ new file mode 100644
 +&sdmmc {
 +	pinctrl-0 = <&sdmmc_bus4 &sdmmc_clk &sdmmc_cmd &sdmmc_cd>;
 +};
-diff --git a/arch/arm/dts/rk3399-xiaobao-nas-v1.dts b/arch/arm/dts/rk3399-xiaobao-nas-v1.dts
+diff --git a/arch/arm/dts/rk3399-xiaobao-nas.dts b/arch/arm/dts/rk3399-xiaobao-nas.dts
 new file mode 100644
 --- /dev/null
-+++ b/arch/arm/dts/rk3399-xiaobao-nas-v1.dts
++++ b/arch/arm/dts/rk3399-xiaobao-nas.dts
 @@ -0,0 +1,774 @@
 +// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
 +
@@ -111,8 +111,8 @@ new file mode 100644
 +#include "rk3399-opp.dtsi"
 +
 +/ {
-+	model = "Codinge Xiaobao NAS I";
-+	compatible = "codinge,xiaobao-nas-v1", "rockchip,rk3399";
++	model = "Codinge Xiaobao NAS";
++	compatible = "codinge,xiaobao-nas", "rockchip,rk3399";
 +
 +	aliases {
 +		mmc0 = &sdmmc;
