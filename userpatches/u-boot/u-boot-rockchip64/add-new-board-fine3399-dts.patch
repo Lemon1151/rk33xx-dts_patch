@@ -1,3 +1,12 @@
+diff --git a/arch/arm/dts/Makefile b/arch/arm/dts/Makefile
+--- a/arch/arm/dts/Makefile
++++ b/arch/arm/dts/Makefile
+@@ -144,4 +144,5 @@ dtb-$(CONFIG_ROCKCHIP_RK3399) += \
+	rk3399-evb.dtb \
+	rk3399-ficus.dtb \
++	rk3399-fine3399.dtb \
+	rk3399-firefly.dtb \
+	rk3399-gru-bob.dtb \
 diff --git a/configs/fine3399-rk3399_defconfig b/configs/fine3399-rk3399_defconfig
 new file mode 100644
 --- /dev/null
@@ -83,15 +92,6 @@ new file mode 100644
 +CONFIG_DISPLAY_ROCKCHIP_HDMI=y
 +CONFIG_SPL_TINY_MEMSET=y
 +CONFIG_ERRNO_STR=y
-diff --git a/arch/arm/dts/Makefile b/arch/arm/dts/Makefile
---- a/arch/arm/dts/Makefile
-+++ b/arch/arm/dts/Makefile
-@@ -144,4 +144,5 @@ dtb-$(CONFIG_ROCKCHIP_RK3399) += \
-	rk3399-evb.dtb \
-	rk3399-ficus.dtb \
-+	rk3399-fine3399.dtb \
-	rk3399-firefly.dtb \
-	rk3399-gru-bob.dtb \
 diff --git a/arch/arm/dts/rk3399-fine3399-u-boot.dtsi b/arch/arm/dts/rk3399-fine3399-u-boot.dtsi
 new file mode 100644
 --- /dev/null
