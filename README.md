@@ -6,3 +6,8 @@
 5.使用非root用户执行compile.sh脚本选择型号进行编译(第一次编译建议编译下内核kernel)  
 6.如果编译出来boot目录没有相关型号dts，自行给Makefile添加相关型号dtb  
 Armbian官方源码仓库地址：https://github.com/armbian/build  
+
+
+
+## Links  
+- https://github.com/cm9vdA/build-armbian
