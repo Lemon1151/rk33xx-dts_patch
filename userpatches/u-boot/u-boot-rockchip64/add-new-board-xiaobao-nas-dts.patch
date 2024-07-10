@@ -1,17 +1,3 @@
-diff --git a/arch/arm/dts/Makefile b/arch/arm/dts/Makefile
---- a/arch/arm/dts/Makefile
-+++ b/arch/arm/dts/Makefile
-@@ -170,7 +170,9 @@
- 	rk3399-rock960.dtb \
- 	rk3399-rockpro64.dtb \
- 	rk3399pro-rock-pi-n10.dtb \
--	rk3399pro-tinker_edge_r.dtb
-+	rk3399pro-tinker_edge_r.dtb \
-+	rk3399-tpm312.dtb \
-+	rk3399-xiaobao-nas.dtb
- 
- dtb-$(CONFIG_ROCKCHIP_RK3568) += \
- 	rk3568-evb.dtb
 diff --git a/configs/xiaobao-nas-rk3399_defconfig b/configs/xiaobao-nas-rk3399_defconfig
 new file mode 100644
 --- /dev/null
