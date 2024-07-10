@@ -1,6 +1,9 @@
 diff --git a/arch/arm64/boot/dts/rockchip/Makefile b/arch/arm64/boot/dts/rockchip/Makefile
 --- a/arch/arm64/boot/dts/rockchip/Makefile
 +++ b/arch/arm64/boot/dts/rockchip/Makefile
-@@ -1 +1,2 @@
-# SPDX-License-Identifier: GPL-2.0
+@@ -1 +1,4 @@
+ # SPDX-License-Identifier: GPL-2.0
++dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3399-fine3399.dtb
++dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3399-tpm312.dtb
 +dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3399-xiaobao-nas.dtb
++dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3399-zysj.dtb
