@@ -118,7 +118,7 @@ diff --git a/arch/arm/dts/rk3399-fine3399.dts b/arch/arm/dts/rk3399-fine3399.dts
 new file mode 100644
 --- /dev/null
 +++ b/arch/arm/dts/rk3399-fine3399.dts
-@@ -0,0 +1,871 @@
+@@ -0,0 +1,870 @@
 +// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
 +
 +/dts-v1/;
@@ -250,7 +250,7 @@ new file mode 100644
 +
 +	fan0: pwm-fan {
 +		compatible = "pwm-fan";
-+		cooling-levels = <0 30 60 90 120 160>;
++		cooling-levels = <0 50 100 150 255>;
 +		#cooling-cells = <2>;
 +		fan-supply = <&vcc_sys>;
 +		pwms = <&pwm1 0 40000 0>;
@@ -281,7 +281,7 @@ new file mode 100644
 +	backlight: backlight {
 +		compatible = "pwm-backlight";
 +		brightness-levels = <0 4 8 16 32 64 128 255>;
-+		default-brightness-level = <5>;
++		default-brightness-level = <3>;
 +		pwms = <&pwm0 0 1000000 0>;
 +		status = "okay";
 +	};
@@ -326,7 +326,7 @@ new file mode 100644
 +		};
 +
 +		cpu_hot: cpu_hot {
-+			temperature = <65000>;
++			temperature = <60000>;
 +			hysteresis = <2000>;
 +			type = "active";
 +		};
@@ -340,7 +340,7 @@ new file mode 100644
 +
 +		map3 {
 +			trip = <&cpu_hot>;
-+			cooling-device = <&fan0 4 THERMAL_NO_LIMIT>;
++			cooling-device = <&fan0 2 THERMAL_NO_LIMIT>;
 +		};
 +	};
 +};
@@ -379,7 +379,7 @@ new file mode 100644
 +		};
 +
 +		gpu_hot: gpu_hot {
-+			temperature = <65000>;
++			temperature = <60000>;
 +			hysteresis = <2000>;
 +			type = "active";
 +		};
@@ -393,7 +393,7 @@ new file mode 100644
 +
 +		map2 {
 +			trip = <&gpu_hot>;
-+			cooling-device = <&fan0 4 THERMAL_NO_LIMIT>;
++			cooling-device = <&fan0 2 THERMAL_NO_LIMIT>;
 +		};
 +	};
 +};
@@ -849,12 +849,10 @@ new file mode 100644
 +
 +&spi2 {
 +	status = "okay";
-+	pinctrl-names = "default";
-+	pinctrl-0 = <&spi2_clk &spi2_tx &spi2_cs0>;
 +
-+	st7735r@0 {
++	panel@0 {
 +		status = "okay";
-+		compatible = "sitronix,st7735r";
++		compatible = "sitronix,st7789v";
 +		reg = <0>;
 +		rgb;
 +		rotate = <270>;
@@ -867,6 +865,7 @@ new file mode 100644
 +		reset-gpios = <&gpio4 RK_PD1 GPIO_ACTIVE_LOW>;
 +		led-gpios = <&gpio4 RK_PC2 GPIO_ACTIVE_HIGH>;  
 +		spi-max-frequency = <32000000>;
++		debug = <0>;
 +		spi-cpol;
 +		spi-cpha;	
 +	};
