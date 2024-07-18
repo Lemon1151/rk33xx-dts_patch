@@ -749,7 +749,7 @@ new file mode 100644
 +		reset-gpios = <&gpio4 RK_PD1 GPIO_ACTIVE_LOW>;
 +		led-gpios = <&gpio4 RK_PC2 GPIO_ACTIVE_HIGH>;  
 +		spi-max-frequency = <32000000>;
-+    debug = <0>;
++		debug = <0>;
 +		spi-cpol;
 +		spi-cpha;
 +	};
